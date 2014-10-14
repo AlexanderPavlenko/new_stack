@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "css-loader": "*",
+    "file-loader": "*",
+    "url-loader": "*",
+    "sass-loader": "*",
+    "style-loader": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  }
+}
