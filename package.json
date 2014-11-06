@@ -1,10 +1,13 @@
 {
   "devDependencies": {
+    "angular-webpack-plugin": "*",
+    "coffee-loader": "*",
     "css-loader": "*",
     "file-loader": "*",
-    "url-loader": "*",
+    "ng-annotate-webpack-plugin": "*",
     "sass-loader": "*",
     "style-loader": "*",
+    "url-loader": "*",
     "webpack": "*",
     "webpack-dev-server": "*"
   }

@@ -1,5 +1,9 @@
-var webpack = require("webpack");
 var path = require("path");
+var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+//var AngularPlugin = require('angular-webpack-plugin');
+
+var webpack = require("webpack");
+
 module.exports = {
   devtool: "inline-source-map",
 
@@ -16,6 +20,10 @@ module.exports = {
     path: __dirname
   },
   plugins: [
+    new ngAnnotatePlugin({
+      add: true
+    }),
+    //new AngularPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   // In case you wanted to load jQuery from the CDN, this is how you would do it:
@@ -24,11 +32,13 @@ module.exports = {
   // },
   resolve: {
     root: [ path.join(__dirname, "assets/javascripts"),
-            path.join(__dirname, "assets/stylesheets") ],
+      path.join(__dirname, "assets/stylesheets") ],
     extensions: ["", ".webpack.js", ".web.js", ".js", ".jsx", ".scss", ".css", "config.js"]
   },
   module: {
     loaders: [
+      { test: /\.coffee$/, loader: "coffee-loader" },
+
       //{ test: require.resolve("react"), loader: "expose?React" },
       //{ test: /\.jsx$/, loaders: ["react-hot", "es6", "jsx?harmony"] },
       { test: /\.css$/, loader: "style-loader!css-loader" },
@@ -36,10 +46,10 @@ module.exports = {
 
       // the url-loader uses DataUrls.
       // the file-loader emits files.
-      { test: /\.woff$/,   loader: "url-loader?limit=10000&minetype=application/font-woff" },
-      { test: /\.ttf$/,    loader: "file-loader" },
-      { test: /\.eot$/,    loader: "file-loader" },
-      { test: /\.svg$/,    loader: "file-loader" }
+      { test: /\.woff$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.ttf$/, loader: "file-loader" },
+      { test: /\.eot$/, loader: "file-loader" },
+      { test: /\.svg$/, loader: "file-loader" }
     ]
   }
 };

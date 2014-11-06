@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -16,7 +17,7 @@
 /tmp
 
 # webpack
-/app/assets/javascripts/webpack.js
+/app/assets/javascripts/feed.js
 
 # node.js
 /node_modules
