@@ -25,6 +25,7 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   # config.assets.css_compressor = :sass
+  config.assets.js_compressor = :uglifier_with_source_maps
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -73,27 +74,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  class Sprockets::UglifierWithMapCompressor < Sprockets::UglifierCompressor
-    def evaluate(context, locals, &block)
-      uglified, source_map = Uglifier.new(
-        comments: :none,
-      ).compile_with_map(data)
-
-      digest = Digest::MD5.new
-      FileUtils.mkdir_p static_assets_dir = "#{Rails.root}/public/assets"
-      file_basename = File.basename(file, '.js')
-
-      source_filename = "#{file_basename}-source-#{digest.hexdigest(data)}.js"
-      File.open("#{static_assets_dir}/#{source_filename}", 'w') { |f| f.write data }
-
-      source_map.sub! '"file":null,"sources":["?"]', "\"file\":#{File.basename(file).inspect}, \"sources\":[#{source_filename.inspect}]"
-      source_map_filename = "#{file_basename}-#{digest.hexdigest(source_map)}.js.map"
-      File.open("#{static_assets_dir}/#{source_map_filename}", 'w') { |f| f.write source_map }
-
-      uglified.concat "\n//# sourceMappingURL=#{source_map_filename}"
-    end
-  end
-  Sprockets.register_compressor 'application/javascript', :uglifier_with_map, Sprockets::UglifierWithMapCompressor
-  config.assets.js_compressor = :uglifier_with_map
 end

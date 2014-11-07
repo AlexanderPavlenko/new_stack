@@ -5,3 +5,6 @@ fast prototyping
 build
 
     webpack --config webpack.rails.config.js
+
+investigate https://github.com/janekp/mapstrace
+
