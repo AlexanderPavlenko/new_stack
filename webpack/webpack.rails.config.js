@@ -1,27 +1,29 @@
 var path = require("path");
-//var AngularPlugin = require('angular-webpack-plugin');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+var CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 
 var railsJsAssetsDir = "../app/assets/javascripts";
 
 module.exports = {
   context: __dirname,
-  entry: [
-    "./assets/javascripts/feed/feed"
-  ],
+  entry: {
+    feed: "./assets/javascripts/feed/feed",
+    test: "./assets/javascripts/test/test"
+  },
   output: {
-    filename: 'feed.js',
-    path: railsJsAssetsDir
+    path: railsJsAssetsDir,
+    filename: '[name].js',
+    chunkFilename: 'chunk[id].js'
   },
   plugins: [
-    //new AngularPlugin(),
     new ngAnnotatePlugin({
       add: true
-    })
+    }),
+    new CommonsChunkPlugin('core.js')
   ],
-  externals: {
-    angular: "angular"
-  },
+//  externals: {
+//    angular: "angular"
+//  },
   resolve: {
     root: [path.join(__dirname, "assets/javascripts/feed")],
     extensions: ["", ".js", ".coffee", ".js.coffee"]

@@ -1,6 +1,5 @@
 var path = require("path");
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
-//var AngularPlugin = require('angular-webpack-plugin');
 
 var webpack = require("webpack");
 
@@ -11,8 +10,8 @@ module.exports = {
   entry: [
     "webpack-dev-server/client?http://localhost:3001",
     "webpack/hot/dev-server",
-    "./scripts/webpack.hot",
-    "./assets/javascripts/test"
+    "./index.js",
+    "./assets/javascripts/feed/feed"
   ],
   // Note, this file is not actually saved, but used by the express server
   output: {
@@ -23,7 +22,6 @@ module.exports = {
     new ngAnnotatePlugin({
       add: true
     }),
-    //new AngularPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   // In case you wanted to load jQuery from the CDN, this is how you would do it:

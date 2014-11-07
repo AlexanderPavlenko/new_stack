@@ -1,5 +1,8 @@
 class DashboardController < ApplicationController
 
-  def index
+  def feed
+  end
+
+  def test
   end
 end
