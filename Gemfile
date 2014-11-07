@@ -1,43 +1,66 @@
 source 'https://rubygems.org'
 
-#
 # Frameworks
-#
+gem 'devise' # Authenticate users
 gem 'rails', '~> 4.2.0.beta2' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
-#
+# Server
+gem 'puma'
+
 # Database
-#
+# gem 'pg', platforms: :ruby # PostgreSQL adapter
 gem 'sqlite3' # Use sqlite3 as the database for Active Record
 
-#
 # Models
-#
+# gem 'activerecord-import' # Bulk inserts
+# gem 'apartment' # Multi-tenancy
+# gem 'awesome_nested_set', github: 'collectiveidea/awesome_nested_set' # Fast selects for trees
 # gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
+# gem 'paper_trail' # Version and audit changes
+# gem 'paranoia' # Hide records instead of deleting them
+# gem 'protector', github: 'inossidabile/protector' # ACL
+# gem 'sanitize' # Strip HTML
+# gem 'state_machine' # may be broken
+# gem 'validate_url' # URLs validator
+gem 'draper' # Create Decorators/Presenters
+gem 'kaminari' # Paginate query results
 
-#
+# API
+gem 'grape'
+gem 'grape-swagger'
+gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+
 # Views
-#
+# gem 'browser-timezone-rails', github: 'Sjors/browser-timezone-rails' # Consider user browser timezone
 gem 'haml-rails'
 
-#
-# Styles
-#
+# Stylesheets
 gem 'sass-rails', '~> 5.0.0.beta1' # Use SCSS for stylesheets
 
-#
-# Assets
-#
+# JavaScript
+# gem 'sprockets-preload', github: 'inossidabile/sprockets-preload' # Show progress of page loading
 # gem 'therubyracer', platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'coffee-rails', '~> 4.0.0' # Use CoffeeScript for .js.coffee assets and views
 gem 'sprockets_uglifier_with_source_maps' # Generate source maps for JavaScripts
 
-#
-# API
-#
-gem 'grape'
-gem 'grape-swagger'
-gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# EMails
+# gem 'actionmailer_inline_css' # Fetch stylesheets from assets pipeline
+# gem 'griddler', github: 'thoughtbot/griddler' # Receive emails
+# gem 'premailer', '~> 1.8.2' # Compile email for better compatibility
+# gem 'sendgrid' # Send emails
+# gem 'sendgrid-parse' # Receive emails from sendgrid
+
+# Tools
+# gem 'hashie' # Hash flavors
+# gem 'mini_magick' # Transform images
+gem 'addressable' # Better URL parser
+gem 'dotenv', require: false # Load environment variables from files
+gem 'envied' # Validate and type-cast environment variables
+gem 'ice_nine', require: ['ice_nine', 'ice_nine/core_ext/object'] # Objects deep freeze
+
+# Seeding
+gem 'factory_girl', require: false
+gem 'ffaker', require: false
 
 
 group :development do

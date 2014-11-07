@@ -1,0 +1,6 @@
+require 'resolv'
+require 'resolv-replace'
+# require 'securerandom'
+# require 'openssl'
+# require 'base64'
+# require 'open-uri'
