@@ -1,0 +1,11 @@
+#!/bin/bash
+npm install
+rsync --archive --delete node_modules/swagger-ui/dist/ public/swagger-ui/
+
+cat public/swagger-ui/index.html |
+sed 's/href=\(.\)css/href=\1\/swagger-ui\/css/g' |
+sed 's/src=\(.\)images/src=\1\/swagger-ui\/images/g' |
+sed 's/src=\(.\)lib/src=\1\/swagger-ui\/lib/g' |
+sed 's/swagger-ui\.js/\/swagger-ui\/swagger-ui\.min\.js/' |
+sed 's/http:\/\/petstore.swagger.wordnik.com\/v2\/swagger.json/\//' \
+> public/swagger-ui/index.html

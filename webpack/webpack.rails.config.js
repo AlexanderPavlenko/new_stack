@@ -21,9 +21,6 @@ module.exports = {
     }),
     new CommonsChunkPlugin('core.js')
   ],
-//  externals: {
-//    angular: "angular"
-//  },
   resolve: {
     root: [path.join(__dirname, "assets/javascripts/feed")],
     extensions: ["", ".js", ".coffee", ".js.coffee"]

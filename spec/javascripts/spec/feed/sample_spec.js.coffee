@@ -1,3 +1,3 @@
-describe 'window', ->
+describe 'sinon', ->
   it 'exists', ->
-    expect(window).toBeDefined()
+    expect(sinon).toBeDefined()
