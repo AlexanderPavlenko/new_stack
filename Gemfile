@@ -2,14 +2,16 @@ source 'https://rubygems.org'
 
 # Frameworks
 gem 'devise' # Authenticate users
-gem 'rails', '~> 4.2.0.beta2' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 4.2.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# gem 'rails-disco', github: 'hicknhack-software/rails-disco' # distributed CQRS and Event Sourcing
 
 # Server
 gem 'puma'
+gem 'rack-cors'
 
 # Database
-# gem 'pg', platforms: :ruby # PostgreSQL adapter
-gem 'sqlite3' # Use sqlite3 as the database for Active Record
+gem 'pg', platforms: :ruby # PostgreSQL adapter
+# gem 'sqlite3' # Use sqlite3 as the database for Active Record
 
 # Models
 # gem 'activerecord-import' # Bulk inserts
@@ -22,25 +24,26 @@ gem 'sqlite3' # Use sqlite3 as the database for Active Record
 # gem 'sanitize' # Strip HTML
 # gem 'state_machine' # may be broken
 # gem 'validate_url' # URLs validator
-gem 'draper' # Create Decorators/Presenters
 gem 'kaminari' # Paginate query results
 
 # API
 gem 'grape'
+gem 'grape-entity'
 gem 'grape-swagger'
-gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# gem 'json-jwt', github: 'nov/json-jwt'
+gem 'rack-jwt-token-auth'
 
 # Views
 # gem 'browser-timezone-rails', github: 'Sjors/browser-timezone-rails' # Consider user browser timezone
 gem 'haml-rails'
 
 # Stylesheets
-gem 'sass-rails', '~> 5.0.0.beta1' # Use SCSS for stylesheets
+gem 'sass-rails' # Use SCSS for stylesheets
 
 # JavaScript
 # gem 'sprockets-preload', github: 'inossidabile/sprockets-preload' # Show progress of page loading
 # gem 'therubyracer', platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'coffee-rails', '~> 4.0.0' # Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails' # Use CoffeeScript for .js.coffee assets and views
 gem 'sprockets_uglifier_with_source_maps' # Generate source maps for JavaScripts
 
 # EMails
@@ -51,7 +54,7 @@ gem 'sprockets_uglifier_with_source_maps' # Generate source maps for JavaScripts
 # gem 'sendgrid-parse' # Receive emails from sendgrid
 
 # Tools
-# gem 'hashie' # Hash flavors
+# gem 'hashie_rails' # Hash flavors
 # gem 'mini_magick' # Transform images
 gem 'addressable' # Better URL parser
 gem 'dotenv', require: false # Load environment variables from files
@@ -68,12 +71,13 @@ group :development do
 end
 
 group :development, :test do
+  gem 'jazz_fingers' # Pry and other whistles
   gem 'byebug' # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'i18n-tasks' # Manage locales
   gem 'quiet_assets' # Hide useless assets requests log entries
   gem 'rspec-rails' # Test all the things
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'web-console', '~> 2.0.0.beta4' # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console' # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'whiny_validation' # Log ActiveModel validation errors
 
   gem 'capybara', require: false # Write integration tests scenarios
