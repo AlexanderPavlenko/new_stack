@@ -28,7 +28,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.coffee$/, loader: "coffee-loader" },
-      //{ test: /\.jsx$/, loaders: ['es6', 'jsx?harmony'] },
+      { test: /\.jsx$/, loaders: ['6to5', 'jsx?harmony'] }
       // Next 2 lines expose jQuery and $ to any JavaScript files loaded after rails-bundle.js
       //   in the Rails Asset Pipeline. Thus, load this one prior.
       //{ test: require.resolve("jquery"), loader: "expose?jQuery" },

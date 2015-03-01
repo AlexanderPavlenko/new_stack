@@ -1,6 +1,6 @@
 fast prototyping
 
-    webpack --config webpack.hot.config.js --watch
+    nodejs server.js
 
 build
 

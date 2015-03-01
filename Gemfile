@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Frameworks
 gem 'devise' # Authenticate users
-gem 'rails', '~> 4.2.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 4.2.1.rc2' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails-disco', github: 'hicknhack-software/rails-disco' # distributed CQRS and Event Sourcing
 
 # Server

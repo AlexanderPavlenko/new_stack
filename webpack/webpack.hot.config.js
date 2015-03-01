@@ -4,19 +4,18 @@ var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 var webpack = require("webpack");
 
 module.exports = {
-  devtool: "inline-source-map",
+  // devtool: "inline-source-map",
 
   context: __dirname, //  + "/../app/assets/javascripts",
   entry: [
     "webpack-dev-server/client?http://localhost:3001",
     "webpack/hot/dev-server",
-    "./index.js",
-    "./assets/javascripts/feed/feed"
+    "./index.js"
   ],
   // Note, this file is not actually saved, but used by the express server
   output: {
     filename: "express-bundle.js",
-    path: __dirname
+    path: '/tmp'
   },
   plugins: [
     new ngAnnotatePlugin({
@@ -38,7 +37,7 @@ module.exports = {
       { test: /\.coffee$/, loader: "coffee-loader" },
 
       //{ test: require.resolve("react"), loader: "expose?React" },
-      //{ test: /\.jsx$/, loaders: ["react-hot", "es6", "jsx?harmony"] },
+      { test: /\.jsx$/, loaders: ["react-hot", "6to5", "jsx?harmony"] },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.scss$/, loader: "style!css!sass?outputStyle=expanded&imagePath=/assets/images"},
 
