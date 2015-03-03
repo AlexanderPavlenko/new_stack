@@ -37,6 +37,7 @@ module.exports = {
       { test: /\.coffee$/, loader: "coffee-loader" },
 
       //{ test: require.resolve("react"), loader: "expose?React" },
+      { test: /\.rt$/, loader: "react-templates-loader" },
       { test: /\.jsx$/, loaders: ["react-hot", "6to5", "jsx?harmony"] },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.scss$/, loader: "style!css!sass?outputStyle=expanded&imagePath=/assets/images"},
