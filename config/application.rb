@@ -23,6 +23,6 @@ module NewStack
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.assets.paths << File.join(Rails.root, %w{webpack assets stylesheets})
+    # config.assets.paths << File.join(Rails.root, %w{webpack assets stylesheets})
   end
 end
