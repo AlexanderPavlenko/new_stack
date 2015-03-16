@@ -38,7 +38,7 @@ module.exports = {
 
       //{ test: require.resolve('react'), loader: 'expose?React' },
       { test: /\.rt$/, loader: 'react-templates' },
-      { test: /\.jsx$/, loaders: ['react-hot', '6to5', 'jsx?harmony'] },
+      { test: /\.jsx$/, loaders: ['react-hot', 'babel', 'jsx?harmony'] },
       { test: /\.css$/, loader: 'style!css' },
       { test: /\.scss$/, loader: 'style!css!sass?outputStyle=expanded&imagePath=/assets/images'},
 

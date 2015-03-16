@@ -69,16 +69,17 @@ gem 'ffaker', require: false
 
 group :development do
   # gem 'fakes3', github: 'jubos/fake-s3' # Mock S3 file storage
+  gem 'i18n-tasks' # Manage locales
+  gem 'meta_request' # support Rails Panel Google Chrome extension
+  gem 'web-console' # Access an IRB console on exception pages or by using <%= console %> in views
 end
 
 group :development, :test do
   gem 'jazz_fingers' # Pry and other whistles
   gem 'byebug' # Call 'debugger' anywhere in the code to stop execution and get a debugger console
-  gem 'i18n-tasks' # Manage locales
   gem 'quiet_assets' # Hide useless assets requests log entries
   gem 'rspec-rails' # Test all the things
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'web-console' # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'whiny_validation' # Log ActiveModel validation errors
 
   gem 'capybara', require: false # Write integration tests scenarios
