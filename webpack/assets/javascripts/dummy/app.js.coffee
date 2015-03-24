@@ -1,7 +1,9 @@
 require 'angular-ujs'
 require './config'
+require './signIn/signInController'
 
-require('angular').module('dummy', [
+angular.module('dummy', [
   'angular.ujs'
   'dummyConfig'
+  'signIn'
 ])

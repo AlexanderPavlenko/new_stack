@@ -17,7 +17,7 @@
 /tmp
 
 # webpack
-/app/assets/javascripts/*.js
+/app/assets/javascripts
 
 # node.js
 /node_modules

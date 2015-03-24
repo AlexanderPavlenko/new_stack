@@ -1,6 +1,6 @@
 require 'flux-angular/src/flux-angular'
 
-require('angular').module('dummyConfig', [
+angular.module('dummyConfig', [
   'flux'
 ])
 .config (fluxProvider) ->
