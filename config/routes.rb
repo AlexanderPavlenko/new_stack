@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'dashboard#index'
-  get '/:action', controller: 'dashboard'
+  root to: 'application#index'
+
   if Rails.env.development?
-    get '/hot_assets/:filename' => "hot_assets#show"
+    get '/hot_assets/:filename' => 'hot_assets#show'
   end
+
+  mount Dummy::API => '/'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

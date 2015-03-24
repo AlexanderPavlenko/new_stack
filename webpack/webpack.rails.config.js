@@ -7,8 +7,7 @@ var railsJsAssetsDir = '../app/assets/javascripts';
 module.exports = {
   context: __dirname,
   entry: {
-    feed: './assets/javascripts/feed/feed',
-    test: './assets/javascripts/test/test'
+    dummy: './assets/javascripts/dummy'
   },
   output: {
     path: railsJsAssetsDir,

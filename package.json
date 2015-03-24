@@ -6,6 +6,7 @@
     "coffee-loader": "*",
     "css-loader": "*",
     "file-loader": "*",
+    "flux-angular": "*",
     "jquery": "*",
     "jsx-loader": "*",
     "karma": "*",

@@ -30,8 +30,7 @@ gem 'kaminari' # Paginate query results
 gem 'grape'
 gem 'grape-entity'
 gem 'grape-swagger'
-# gem 'json-jwt', github: 'nov/json-jwt'
-gem 'rack-jwt-token-auth'
+gem 'jwt'
 
 # Views
 # gem 'browser-timezone-rails', github: 'Sjors/browser-timezone-rails' # Consider user browser timezone

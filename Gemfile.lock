@@ -267,9 +267,6 @@ GEM
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
     rack-cors (0.3.1)
-    rack-jwt-token-auth (0.0.2)
-      jwt (~> 1)
-      rack (~> 1)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
     rack-test (0.6.3)
@@ -430,13 +427,13 @@ DEPENDENCIES
   i18n-tasks
   ice_nine
   jazz_fingers
+  jwt
   kaminari
   meta_request
   pg
   puma
   quiet_assets
   rack-cors
-  rack-jwt-token-auth
   rails (~> 4.2.1.rc2)
   rr
   rspec-rails

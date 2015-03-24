@@ -1,3 +1,2 @@
-window.$ = require('jquery');
-require('angular');
-require('angular-ujs');
+global.$ = require('jquery');
+global.angular = require('angular');
