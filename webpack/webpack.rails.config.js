@@ -1,6 +1,7 @@
 var path = require('path');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 var CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+require('coffee-script/register');
 
 var railsJsAssetsDir = '../app/assets/javascripts';
 
@@ -28,12 +29,10 @@ module.exports = {
     loaders: [
       { test: /\.coffee$/, loader: 'coffee' },
       { test: /\.rt$/, loader: 'react-templates' },
+      { test: /\.html$/, loaders: ['ngtemplate?relativeTo=assets/javascripts', 'html'] },
+      { test: /\.html\.hamlc$/, loaders: ['ngtemplate?relativeTo=assets/javascripts', 'haml'] },
+      { test: /\.js\.hamlc$/, loader: 'hamlc' },
       { test: /\.jsx$/, loaders: ['babel', 'jsx?harmony'] }
-      // Next 2 lines expose jQuery and $ to any JavaScript files loaded after rails-bundle.js
-      //   in the Rails Asset Pipeline. Thus, load this one prior.
-      //{ test: require.resolve('jquery'), loader: 'expose?jQuery' },
-      //{ test: require.resolve('jquery'), loader: 'expose?$' },
-      //{ test: require.resolve('react'), loader: 'expose?React' }
     ]
   }
 };

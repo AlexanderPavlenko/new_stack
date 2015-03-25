@@ -5,6 +5,11 @@
       "from": "angular@1.4.0-beta.5",
       "resolved": "https://registry.npmjs.org/angular/-/angular-1.4.0-beta.5.tgz"
     },
+    "angular-ui-router": {
+      "version": "0.2.13",
+      "from": "angular-ui-router@*",
+      "resolved": "https://registry.npmjs.org/angular-ui-router/-/angular-ui-router-0.2.13.tgz"
+    },
     "angular-ujs": {
       "version": "0.4.8",
       "from": "angular-ujs@",
@@ -689,6 +694,152 @@
           "version": "0.2.4",
           "from": "immutable-store@^0.2.4",
           "resolved": "https://registry.npmjs.org/immutable-store/-/immutable-store-0.2.4.tgz"
+        }
+      }
+    },
+    "haml-loader": {
+      "version": "0.1.0",
+      "from": "haml-loader@*",
+      "dependencies": {
+        "haml-coffee": {
+          "version": "1.14.1",
+          "from": "haml-coffee@^1.14.1",
+          "resolved": "https://registry.npmjs.org/haml-coffee/-/haml-coffee-1.14.1.tgz",
+          "dependencies": {
+            "walkdir": {
+              "version": "0.0.7",
+              "from": "walkdir@~0.0.7"
+            },
+            "optimist": {
+              "version": "0.6.1",
+              "from": "optimist@~0.6.0",
+              "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
+              "dependencies": {
+                "wordwrap": {
+                  "version": "0.0.2",
+                  "from": "wordwrap@~0.0.2"
+                },
+                "minimist": {
+                  "version": "0.0.10",
+                  "from": "minimist@~0.0.1",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz"
+                }
+              }
+            }
+          }
+        },
+        "loader-utils": {
+          "version": "0.2.6",
+          "from": "loader-utils@0.2.x",
+          "resolved": "https://registry.npmjs.org/loader-utils/-/loader-utils-0.2.6.tgz",
+          "dependencies": {
+            "json5": {
+              "version": "0.1.0",
+              "from": "json5@0.1.x",
+              "resolved": "https://registry.npmjs.org/json5/-/json5-0.1.0.tgz"
+            },
+            "big.js": {
+              "version": "2.5.1",
+              "from": "big.js@~2.5.1",
+              "resolved": "https://registry.npmjs.org/big.js/-/big.js-2.5.1.tgz"
+            }
+          }
+        }
+      }
+    },
+    "hamlc-loader": {
+      "version": "0.0.11",
+      "from": "hamlc-loader@*",
+      "resolved": "https://registry.npmjs.org/hamlc-loader/-/hamlc-loader-0.0.11.tgz",
+      "dependencies": {
+        "haml-coffee": {
+          "version": "1.14.1",
+          "from": "haml-coffee@^1.14.1",
+          "resolved": "https://registry.npmjs.org/haml-coffee/-/haml-coffee-1.14.1.tgz",
+          "dependencies": {
+            "walkdir": {
+              "version": "0.0.7",
+              "from": "walkdir@~0.0.7"
+            },
+            "optimist": {
+              "version": "0.6.1",
+              "from": "optimist@~0.6.0",
+              "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
+              "dependencies": {
+                "wordwrap": {
+                  "version": "0.0.2",
+                  "from": "wordwrap@~0.0.2"
+                },
+                "minimist": {
+                  "version": "0.0.10",
+                  "from": "minimist@~0.0.1",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz"
+                }
+              }
+            }
+          }
+        },
+        "loader-utils": {
+          "version": "0.2.6",
+          "from": "loader-utils@0.2.x",
+          "resolved": "https://registry.npmjs.org/loader-utils/-/loader-utils-0.2.6.tgz",
+          "dependencies": {
+            "json5": {
+              "version": "0.1.0",
+              "from": "json5@0.1.x",
+              "resolved": "https://registry.npmjs.org/json5/-/json5-0.1.0.tgz"
+            },
+            "big.js": {
+              "version": "2.5.1",
+              "from": "big.js@~2.5.1",
+              "resolved": "https://registry.npmjs.org/big.js/-/big.js-2.5.1.tgz"
+            }
+          }
+        }
+      }
+    },
+    "html-loader": {
+      "version": "0.2.3",
+      "from": "html-loader@*",
+      "resolved": "https://registry.npmjs.org/html-loader/-/html-loader-0.2.3.tgz",
+      "dependencies": {
+        "html-minifier": {
+          "version": "0.5.6",
+          "from": "html-minifier@0.5.x",
+          "resolved": "https://registry.npmjs.org/html-minifier/-/html-minifier-0.5.6.tgz"
+        },
+        "source-map": {
+          "version": "0.1.43",
+          "from": "source-map@0.1.x",
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.1.43.tgz",
+          "dependencies": {
+            "amdefine": {
+              "version": "0.1.0",
+              "from": "amdefine@>=0.0.4"
+            }
+          }
+        },
+        "fastparse": {
+          "version": "1.0.0",
+          "from": "fastparse@^1.0.0",
+          "resolved": "https://registry.npmjs.org/fastparse/-/fastparse-1.0.0.tgz"
+        },
+        "loader-utils": {
+          "version": "0.2.6",
+          "from": "loader-utils@~0.2.2",
+          "resolved": "https://registry.npmjs.org/loader-utils/-/loader-utils-0.2.6.tgz",
+          "dependencies": {
+            "json5": {
+              "version": "0.1.0",
+              "from": "json5@0.1.x",
+              "resolved": "https://registry.npmjs.org/json5/-/json5-0.1.0.tgz"
+            },
+            "big.js": {
+              "version": "2.5.1",
+              "from": "big.js@~2.5.1",
+              "resolved": "https://registry.npmjs.org/big.js/-/big.js-2.5.1.tgz"
+            }
+          }
         }
       }
     },
@@ -2533,6 +2684,35 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    "ngtemplate-loader": {
+      "version": "1.3.0",
+      "from": "ngtemplate-loader@*",
+      "resolved": "https://registry.npmjs.org/ngtemplate-loader/-/ngtemplate-loader-1.3.0.tgz",
+      "dependencies": {
+        "jsesc": {
+          "version": "0.5.0",
+          "from": "jsesc@^0.5.0",
+          "resolved": "https://registry.npmjs.org/jsesc/-/jsesc-0.5.0.tgz"
+        },
+        "loader-utils": {
+          "version": "0.2.6",
+          "from": "loader-utils@~0.2.2",
+          "resolved": "https://registry.npmjs.org/loader-utils/-/loader-utils-0.2.6.tgz",
+          "dependencies": {
+            "json5": {
+              "version": "0.1.0",
+              "from": "json5@0.1.x",
+              "resolved": "https://registry.npmjs.org/json5/-/json5-0.1.0.tgz"
+            },
+            "big.js": {
+              "version": "2.5.1",
+              "from": "big.js@~2.5.1",
+              "resolved": "https://registry.npmjs.org/big.js/-/big.js-2.5.1.tgz"
             }
           }
         }
