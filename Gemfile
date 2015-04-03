@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Frameworks
 gem 'devise' # Authenticate users
-gem 'rails', '~> 4.2.1.rc2' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 4.2.1' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails-disco', github: 'hicknhack-software/rails-disco' # distributed CQRS and Event Sourcing
 
 # Server
@@ -44,7 +44,7 @@ gem 'bootstrap-sass'
 # gem 'sprockets-preload', github: 'inossidabile/sprockets-preload' # Show progress of page loading
 # gem 'therubyracer', platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'coffee-rails' # Use CoffeeScript for .js.coffee assets and views
-gem 'sprockets_uglifier_with_source_maps', path: '../sprockets_uglifier_with_source_maps' # Generate source maps for JavaScripts
+gem 'sprockets_uglifier_with_source_maps' #, path: '../sprockets_uglifier_with_source_maps' # Generate source maps for JavaScripts
 
 # EMails
 # gem 'actionmailer_inline_css' # Fetch stylesheets from assets pipeline
