@@ -18,6 +18,7 @@
 
 # webpack
 /app/assets/javascripts
+/public/assets
 
 # node.js
 /node_modules

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Frameworks
 gem 'devise' # Authenticate users
-gem 'rails', '~> 4.2.1' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails-disco', github: 'hicknhack-software/rails-disco' # distributed CQRS and Event Sourcing
 
 # Server
@@ -76,7 +76,7 @@ end
 group :development, :test do
   gem 'jazz_fingers' # Pry and other whistles
   gem 'byebug' # Call 'debugger' anywhere in the code to stop execution and get a debugger console
-  gem 'quiet_assets' # Hide useless assets requests log entries
+  # gem 'quiet_assets' # Hide useless assets requests log entries
   gem 'rspec-rails' # Test all the things
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'whiny_validation' # Log ActiveModel validation errors
