@@ -1,10 +1,10 @@
 fast prototyping
 
-    nodejs server.js
+    cd webpack && nodejs server.js
 
 build
 
-    webpack --config webpack.rails.config.js
+    cd webpack && ../bin/webpack --config webpack.rails.config.js
 
 investigate https://github.com/janekp/mapstrace
 
@@ -14,4 +14,5 @@ js unit testing
 
 console
 
+    cp tmuxinator.yml ~/.tmuxinator/new_stack.yml
     tmuxinator start new_stack

@@ -7,10 +7,12 @@ root: ~/Projects/new_stack
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
+pre: mkdir -p /tmp/new_stack_js
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: rvm use ruby-2.2.0
+pre_window: |
+  rvm use ruby-2.3.3
+  source bin/npm-path
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -24,7 +26,7 @@ windows:
 #      panes:
 #        - vim
 #        - guard
-  - fig: fig up
+  - docker: docker-compose up
   - server: bin/rails s
 #  - logs: tail -f log/development.log
   - webpack: cd webpack && ../bin/webpack --config webpack.rails.config.js --watch

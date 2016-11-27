@@ -1,4 +1,4 @@
 db:
-  image: "postgres:9.4"
+  image: "postgres:latest"
   ports:
     - "15432:5432"

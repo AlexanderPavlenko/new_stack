@@ -28,7 +28,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.coffee$/, loader: 'coffee' },
-      { test: /\.rt$/, loader: 'react-templates' },
+      { test: /\.rt$/, loader: 'react-templates?modules=amd' },
       { test: /\.html$/, loaders: ['ngtemplate?relativeTo=assets/javascripts', 'html'] },
       { test: /\.html\.hamlc$/, loaders: ['ngtemplate?relativeTo=assets/javascripts', 'haml'] },
       { test: /\.js\.hamlc$/, loader: 'hamlc' },
